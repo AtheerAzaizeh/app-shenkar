@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>פרטי חג | تفاصيل العيد</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="icons/shenkar.png" alt="Shenkar Logo">
+        </div>
+        <button class="close-btn" onclick="window.location.href='holidays.html';">&times;</button>
+    </header>
+
+    <main class="holiday-details">
+
+        <div class="carousel-slide" id="slide-1">
+            <h3>نبذة عن العيد:</h3>
+            <p id="holiday-description"></p>
+        </div> 
+
+        <div class="carousel-slide" id="slide-2">
+            <h2 style="color: red;">מנהגים ומאכלים</h2>
+            <h3>מנהגי החג: </h3>
+            <p id="holiday-traditions"></p>
+            <h3>מאכלים:</h3>
+            <p id="holiday-foods"></p>
+        </div>
+      
+         <div class="carousel-slide active" id="slide-3">
+            <h2 id="holiday-name"></h2>
+            <div class="holiday-date-box">
+                <p id="holiday-date"></p>
+            </div>
+            <p class="holiday-greeting" id="holiday-greeting"></p>
+            <img id="holiday-image" src="" alt="Holiday Illustration">
+    </main>
+
+    <footer class="carousel-footer">
+        <button id="prevBtn" class="carousel-btn">&#x25B7;</button>
+        <div class="dots">
+            <span class="dot active" onclick="moveToSlide(2)"></span>
+            <span class="dot" onclick="moveToSlide(1)"></span>
+            <span class="dot" onclick="moveToSlide(0)"></span>
+        </div>
+        <button id="nextBtn" class="carousel-btn">&#x25C1;</button>
+    </footer>
+
+</body>
+</html>
