@@ -37,6 +37,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
     showSlide(currentSlide);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    let startX=2;
+    const carousel = document.querySelector(".carousel-slide");
+
+    carousel.addEventListener("touchstart", function (e) {
+        startX = e.touches[0].clientX;
+    });
+
+    carousel.addEventListener("touchmove", function (e) {
+        let moveX = e.touches[0].clientX - startX;
+        if (moveX > 50) {
+            document.getElementById("prevBtn").click();
+        } else if (moveX < -50) {
+            document.getElementById("nextBtn").click();
+        }
+    });
+});
+
 // ==== HOLIDAY DATA ====
 const holidays = [
     { id: "eid-al-fitr", name_he: "עיד אל-פיטר", name_ar: "عيد الفطر", date: "2025-03-29" },
