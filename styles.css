@@ -9,13 +9,12 @@ body {
 
 /* Header */
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
+    position: sticky;
+    top: 0;
     background: white;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
 }
+
 
 .logo img {
     height: 40px;
@@ -38,13 +37,13 @@ h2 {
 /* Grid container */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
     padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-
+    max-width: 90%;
+    margin: auto;
 }
+
 
 /* Card */
 .card {
@@ -101,25 +100,25 @@ h2 {
 }
 
 .holiday-list ul {
-    list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .holiday-list li {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    font-size: 16px;
+    padding: 15px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-slide {
     display: none;
     text-align: center;
-    padding: 20px;
-    width: 343px;
-    height: 680px;
+    width: 100%;
+    height: 100%;
     background: #fdf6e4;
-    border-radius: 10px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-slide.active {
@@ -205,8 +204,8 @@ h2 {
 }
 
 #holiday-image {
-    background-color: #fdf6e4; 
-    width: 80%;
+    width: 100%;
     max-width: 300px;
-    margin-top: 10px;
+    height: auto;
 }
+
