@@ -14,6 +14,7 @@ body {
     padding: 20px 10px;
     max-width: 100%;
 }
+
 html, body {
     overflow-x: hidden;
     width: 100%;
@@ -212,7 +213,7 @@ h2 {
 
 .start-btn:hover {
     background: darkred;
-}
+ }
 
 
 /* Holiday Details Page */
@@ -348,9 +349,48 @@ h2 {
         padding: 10px;
         margin: 5px auto;
     }
-    #holiday-date{
-    margin-top: 90px;
-}
+    .quiz-container {
+        padding: 15px;
+        margin: 10px auto;
+        max-width: 90%;
+    }
+
+    /* Make text more readable on small screens */
+    h1, h2 {
+        font-size: 18px;
+    }
+
+    .card {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* Adjust buttons */
+    button {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    /* Ensure header remains user-friendly */
+    header {
+        padding: 10px;
+    }
+
+    /* Make the grid layout flexible */
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 10px;
+    }
+
+    /* Reduce button sizes */
+    .carousel-btn {
+        font-size: 18px;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
 }
 
 
