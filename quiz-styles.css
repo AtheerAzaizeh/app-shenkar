@@ -1,0 +1,143 @@
+/* General Styles */
+body {
+    font-family: 'Heebo', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa;
+    text-align: center;
+}
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+h1 {
+    font-size: 22px;
+    color: #333;
+}
+
+/* Back Button */
+.back-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Quiz Container */
+.quiz-container {
+    background: #fdf6e4;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: right;
+}
+
+/* Question Styling */
+.question h2 {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+/* Answers List */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    background: fdf6e4;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+ul li:hover {
+    background: #ffebeb;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Radio Buttons */
+input[type="radio"] {
+    margin-left: 10px;
+    transform: scale(1.2);
+}
+
+/* Submit / Next Button */
+button {
+    background: red;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: darkred;
+}
+
+/* Result Page */
+.result-page {
+    text-align: center;
+    display: none;
+}
+
+.result-page h2 {
+    font-size: 22px;
+    color: green;
+}
+
+.result-page p {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+label.correct {
+    color: green;
+}
+
+label.incorrect {
+    color: red;
+}
+
+#score {
+    display: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin-top: 20px;
+}
