@@ -56,9 +56,9 @@ document.addEventListener("DOMContentLoaded", function () {
     carousel.addEventListener("touchend", function (e) {
         let moveX = e.changedTouches[0].clientX - startX;
         if (moveX > 50) {
-            document.getElementById("prevBtn").click();
-        } else if (moveX < -50) {
             document.getElementById("nextBtn").click();
+        } else if (moveX < -50) {
+            document.getElementById("prevBtn").click();
         }
     });
 });
