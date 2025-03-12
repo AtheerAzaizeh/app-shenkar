@@ -99,6 +99,16 @@ button {
     transition: background 0.3s ease;
 }
 
+.header {
+    overflow: hidden;
+    background-color: white;
+    padding: 20px 10px;
+}
+
+.logo img {
+    height: 50px;
+}
+
 button:hover {
     background: darkred;
 }
