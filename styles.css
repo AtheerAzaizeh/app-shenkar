@@ -325,4 +325,50 @@ h2 {
     transform: translateX(0);
 }
 
+@media screen and (max-width: 600px) {
+    /* Reduce padding and margins */
+    .quiz-container {
+        padding: 15px;
+        margin: 10px auto;
+        max-width: 90%;
+    }
+
+    /* Make text more readable on small screens */
+    h1, h2 {
+        font-size: 18px;
+    }
+
+    .card {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* Adjust buttons */
+    button {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    /* Ensure header remains user-friendly */
+    header {
+        padding: 10px;
+    }
+
+    /* Make the grid layout flexible */
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 10px;
+    }
+
+    /* Reduce button sizes */
+    .carousel-btn {
+        font-size: 18px;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+}
+
 
