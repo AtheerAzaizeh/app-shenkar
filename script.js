@@ -89,7 +89,7 @@ const holidays = [
     { id: "yom-kippur", name_he: "יום הכיפורים", name_ar: "يوم الغفران", date: "2025-10-02" },
     { id: "hanukkah", name_he: "חנוכה", name_ar: "عيد الحانوكا", date: "2025-12-15" },
     { id: "eid-al-adha", name_he: "עיד אל-אדחא", name_ar: "عيد الأضحى", date: "2025-06-28" },
-    {id: "eid-porim" , name_he: "חג פורים" , name_ar: "عيد البوريم" , date: "13-14/3"}
+    {id: "eid-porim" , name_he: "חג פורים" , name_ar: "عيد البوريم" , date: "2025-03-13"}
 ];
 
 // ==== FIND NEAREST HOLIDAY ====
