@@ -152,6 +152,33 @@ label.incorrect {
     margin-top: 20px;
 }
 
+.title-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the title */
+    position: relative;
+    padding: 10px;
+    background: white;
+    width: 100%;
+}
+
+.back-btn {
+    position: absolute;
+    left: 10px; /* Keep button on the left */
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+h1 {
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+    font-size: 22px;
+}
+
+
 @media screen and (max-width: 600px) {
     .quiz-container, .grid-container {
         padding: 10px;
