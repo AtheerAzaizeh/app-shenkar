@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>חידון עיד אל-פיטר</title>
+    <link rel="stylesheet" href="quiz-styles.css">
+    <script defer src="quiz.js"></script>
+</head>
+<body>
+
+<header>
+    <button class="back-btn" onclick="goBack()">&#x2190;</button>
+    <h1>חידון עיד אל-פיטר</h1>
+</header>
+
+<main class="quiz-container">
+    <!-- Question 1 -->
+    <div class="question">
+        <h2>1. מהו עיד אל-פיטר?</h2>
+        <ul>
+            <li><label><input type="radio" name="q1"> חג מוסלמי המציין את תחילת חודש הרמדאן</label></li>
+            <li><label><input type="radio" name="q1" id="correct-q1"> חג מוסלמי המציין את סיום חודש הרמדאן</label></li>
+            <li><label><input type="radio" name="q1"> חג מוסלמי המציין את תחילת השנה האסלאמית</label></li>
+        </ul>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question">
+        <h2>2. מהו אחד המנהגים המרכזיים בעיד אל-פיטר?</h2>
+        <ul>
+            <li><label><input type="radio" name="q2"> צום מהזריחה עד השקיעה</label></li>
+            <li><label><input type="radio" name="q2"> הדלקת נרות במשך שלושה ימים</label></li>
+            <li><label><input type="radio" name="q2" id="correct-q2"> שבירת הצום ואכילת תמרים בבוקר החג</label></li>
+        </ul>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question">
+        <h2>3. איזו מצווה מקיימים בחג?</h2>
+        <ul>
+            <li><label><input type="radio" name="q3" id="correct-q3"> מתן צדקה לנזקקים (זכאת אל-פיטר)</label></li>
+            <li><label><input type="radio" name="q3"> מתן תרומות לבנייה מסגדים</label></li>
+            <li><label><input type="radio" name="q3"> הבאת קורבן למסגד</label></li>
+        </ul>
+    </div>
+
+    <!-- Submit Button -->
+    <button onclick="checkAnswers()">בדיקת תשובות</button>
+
+    <!-- Result Section -->
+    <div class="result-page" id="result" style="display: none;">
+        <h2>תוצאה</h2>
+        <p id="score"></p>
+        <button onclick="restartQuiz()">נסה שוב</button>
+    </div>
+</main>
+
+</body>
+</html>
