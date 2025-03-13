@@ -89,7 +89,7 @@ function startTimer() {
             clearInterval(timerInterval);
             timeUpSound.play();
             timerDisplay.innerText = "⏳ הזמן נגמר|انتهى الوقت!";
-            timeUpSound.pause();
+            timeUpSound.pause()
             lockQuiz(); // Disable inputs
         }
     }, 1000);
