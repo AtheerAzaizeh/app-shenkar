@@ -179,6 +179,7 @@ h1 {
 }
 
 
+
 @media screen and (max-width: 600px) {
     .quiz-container, .grid-container {
         padding: 10px;

@@ -112,15 +112,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const holidayList = document.getElementById("holiday-list");
     if (holidayList) {
         holidays.forEach(holiday => {
-            const li = document.createElement("li");
-            li.innerText = `${holiday.name_ar} | ${holiday.name_he} - ${holiday.date}`;
-            li.onclick = function () {
+            const button = document.createElement("button");
+            button.innerText = `${holiday.name_ar} | ${holiday.name_he} - ${holiday.date}`;
+            button.classList.add("holiday-button");
+            button.onclick = function () {
                 openHolidayPage(holiday.id);
             };
-            holidayList.appendChild(li);
+            holidayList.appendChild(button);
         });
     }
 });
+
 
 // ==== OPEN HOLIDAY DETAILS PAGE ====
 function openHolidayPage(holidayId) {
@@ -171,7 +173,7 @@ const holidayDetails = {
         description:"قراءة سفر أستير في الكنيس مساء العيد وصباح اليوم التالي. متانوت لاَفيونيم – تقديم الصدقات للمحتاجين كجزء من واجبات العيد. مشلوح مَنوت – إرسال هدايا من الطعام والحلويات للأصدقاء والعائلة. مأدبة بوريم – وجبة احتفالية تتخللها الأغاني والفرح. الأزياء والحفلات – يُعتاد ارتداء الأزياء التنكرية وإقامة مواكب احتفالية.",
         food: "أشهر الأطعمة التقليدية هي أوزني هامان – وهي بسكويت محشو ببذور الخشخاش، الشوكولاتة أو المربى.",
         desc: "פורים הוא חג יהודי המציין את נס הצלת היהודים מפרס מהגזירה של המן, כפי שמתואר במגילת אסתר. החג מסמל שמחה, ניצחון והתלכדות קהילתית." ,
-        descar: "يد الفطر هو عيد إسلامي يحتفل به بمناسبة انتهاء شهر رمضان، شهر الصيام والتقشف. يرمز العيد إلى الفرح، الإخاء والتضامن الاجتماعي."
+        descar: "بوريم هو عيد يهودي يُحيي ذكرى إنقاذ اليهود في بلاد فارس من مؤامرة هامان، كما هو مذكور في سفر أستير. يرمز العيد إلى الفرح، الانتصار، والتلاحم المجتمعي."
     }
 };
 
@@ -197,6 +199,9 @@ function loadHolidayDetails() {
     document.getElementById("holiday-desc").innerText = holidayDetails[holidayId].desc + "\n\n\n\n" +  holidayDetails[holidayId].descar
                                                         document.getElementById("holiday-image2").src = holidayDetails[holidayId].image2;
 const startBtn = document.getElementById("startQuizBtn");
+
+const quizTitle = document.querySelector("#slide-4 h2");
+quizTitle.innerText = `מעבר לחידון ${holidayDetails[holidayId].name}`; 
 
 if (["eid-al-fitr", "eid-al-adha", "ramadan"].includes(holidayId)) {
     startBtn.innerText = "התחלה"; // Hebrew for Muslim holidays
