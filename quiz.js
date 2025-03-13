@@ -65,34 +65,51 @@ window.onload = function () {
     startTimer();
 };
 
-// Function to start the timer
+document.addEventListener("click", function enableAudio() {
+    correctSound.muted = false;
+    wrongSound.muted = false;
+    clickSound.muted = false;
+    timeUpSound.muted = false;
+
+    // Play a short silent sound to "unlock" autoplay on iOS
+    const unlock = new Audio("sounds/correct.mp3");
+    unlock.play().then(() => {
+        console.log("Audio unlocked");
+    }).catch(error => console.log("Unlocking audio failed:", error));
+
+    document.removeEventListener("click", enableAudio);
+});
+
+// Start Timer Function (Fix for iOS)
 function startTimer() {
     const quizContainer = document.querySelector(".quiz-container");
-    timeUpSound.play();
-    // Create timer element
+
     const timerDisplay = document.createElement("h2");
     timerDisplay.id = "timer";
-    timerDisplay.innerText = `⏳ זמן שנותר|الوقت المتبقي: ${timeLeft} ثانية`;
+    timerDisplay.innerText = `⏳ זמן שנותר | الوقت المتبقي: ${timeLeft} שניות`;
     timerDisplay.style.textAlign = "center";
-    timerDisplay.style.color = "red"; // Make it stand out
-    timerDisplay.style.marginTop = "20px"; // Add spacing from questions
+    timerDisplay.style.color = "red";
+    timerDisplay.style.marginTop = "20px";
 
-    // Append timer at the bottom
     quizContainer.appendChild(timerDisplay);
 
-    // Start countdown
     timerInterval = setInterval(function () {
         timeLeft--;
-        timerDisplay.innerText = `⏳ זמן שנותר|الوقت المتبقي: ${timeLeft} ثانية`;
+        timerDisplay.innerText = `⏳ זמן שנותר | الوقت المتبقي: ${timeLeft} שניות`;
 
         if (timeLeft <= 0) {
             clearInterval(timerInterval);
-            timeUpSound.play();
-            timerDisplay.innerText = "⏳ הזמן נגמר|انتهى الوقت!";
-            timeUpSound.pause();
-            lockQuiz(); // Disable inputs
+            playTimeUpSound(); // Play the time-up sound safely
+            timerDisplay.innerText = "⏳ הזמן נגמר | انتهى الوقت!";
         }
     }, 1000);
+}
+
+// Function to play time-up sound with iOS fix
+function playTimeUpSound() {
+    timeUpSound.play().catch(error => {
+        console.log("Time-up sound blocked:", error);
+    });
 }
 
 // Disable all answers when time runs out
